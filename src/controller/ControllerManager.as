@@ -13,14 +13,14 @@ public class ControllerManager extends Sprite {
     private static var _instance:ControllerManager;
     private var _modelManager:ModelManager;
     private var _viewManager:ViewManager;
+
     public function ControllerManager(block:SingletonBlock):void {
         if (stage) init();
         else addEventListener(Event.ADDED_TO_STAGE, init);
     }
-    public static function getInstance():ControllerManager
-    {
-        if(_instance == null)
-        {
+
+    public static function getInstance():ControllerManager {
+        if (_instance == null) {
             _instance = new ControllerManager(new SingletonBlock());
         }
         return _instance;
@@ -34,7 +34,7 @@ public class ControllerManager extends Sprite {
 
     private function layout():void {
         _modelManager = ModelManager.getInstance();
-        _modelManager.addEventListener(CustomEvent.MODEL_LOADCOMPLETE ,modelLoadCompleteHandler)
+        _modelManager.addEventListener(CustomEvent.MODEL_LOADCOMPLETE, modelLoadCompleteHandler)
 
         _viewManager = new ViewManager();
         addChild(_viewManager);
@@ -43,12 +43,11 @@ public class ControllerManager extends Sprite {
     }
 
     private function modelLoadCompleteHandler(event:CustomEvent):void {
-        trace("modelLoadCompleteHandler");
         _viewManager.loadComplete();
 
     }
 }
 }
-class SingletonBlock{
+class SingletonBlock {
 
 }

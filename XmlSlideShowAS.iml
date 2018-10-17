@@ -4,6 +4,14 @@
     <configurations>
       <configuration name="XmlSlideShowAS" target-platform="Desktop" pure-as="true" main-class="Main" output-file="XmlSlideShowAS.swf" output-folder="$MODULE_DIR$/bin">
         <dependencies target-player="28.0">
+          <entries>
+            <entry library-name="stats" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Tween24_2.0.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
           <sdk name="4.6.0+28.0.0" />
         </dependencies>
         <compiler-options />
@@ -21,5 +29,7 @@
     </content>
     <orderEntry type="jdk" jdkName="4.6.0+28.0.0" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="stats" level="project" />
+    <orderEntry type="library" exported="" name="Tween24_2.0.1" level="project" />
   </component>
 </module>

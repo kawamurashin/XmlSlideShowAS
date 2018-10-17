@@ -2,7 +2,7 @@
 <data>
     <scenes>
         <scene id="0">
-            <text>text001</text>
+            <text>TEXTtext001</text>
             <images>
                 <image id="0">image/image001.png</image>
                 <image id="1">image/image002.png</image>
